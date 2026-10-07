@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>상식 퀴즈</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <section id="start-screen" class="screen">
+      <h1>상식 퀴즈</h1>
+      <ul id="validation-errors" class="validation-errors" hidden></ul>
+      <fieldset class="options">
+        <legend>카테고리</legend>
+        <div id="category-options" class="option-list"></div>
+      </fieldset>
+      <p id="start-mode-note" class="note"></p>
+      <button id="start-button" class="primary" type="button">시작</button>
+    </section>
+
+    <section id="quiz-screen" class="screen" hidden>
+      <p id="quiz-status" class="status"></p>
+      <h2 id="question-text" class="question"></h2>
+      <div id="choices" class="choices"></div>
+      <div id="feedback" class="feedback" hidden>
+        <p id="feedback-verdict" class="verdict"></p>
+        <p id="feedback-explanation" class="explanation"></p>
+      </div>
+      <button id="next-button" class="primary" type="button" hidden>다음</button>
+    </section>
+
+    <section id="result-screen" class="screen" hidden>
+      <h2>결과</h2>
+      <p id="result-score" class="score"></p>
+      <p id="result-counts"></p>
+      <p id="result-unranked-note" class="note" hidden></p>
+      <div class="actions">
+        <button id="again-button" class="primary" type="button">같은 설정으로 다시</button>
+        <button id="home-button" type="button">처음으로</button>
+      </div>
+    </section>
+
+    <section id="board-screen" class="screen" hidden></section>
+  </main>
+
+  <script src="questions.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
