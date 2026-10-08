@@ -498,12 +498,23 @@ selfTest("remainingSeconds: 15에서 0까지, 음수 없음", ({ assert }) => {
 **인터페이스:**
 - 쓰는 것: `MODES`, `useHint`, `RoundState.removed`(작업 5)
 - 만드는 것
+  - 화면 흐름: 시작 화면에서 카테고리 → [다음] → 모드 선택 화면 → 모드 버튼 → 문제 화면(PRD 3.1)
+  - `SCREENS`에 `"mode"`를 더해요. `showScreen("mode")`는 `section#mode-screen`만 보여요.
   - DOM id
-    - `#mode-options`: `name="mode"` 라디오 3개. 값은 `practice`, `speed`, `hint`이고 기본값은 `practice`예요.
+    - 시작 화면: `#student-info`("학번 2601928 이름 김송연", 화면 맨 위), `#category-options`, `#start-button`(문구 [다음])
+      - 시작 화면에는 모드 선택과 "순위표에 기록되지 않음"을 두지 않아요.
+    - 모드 선택 화면(`#mode-screen`)
+      - `#mode-category`: `카테고리: ${category}`
+      - `#mode-options`: `MODES` 순서대로 버튼 3개([연습], [스피드], [힌트]), 버튼마다 `data-mode`에 `practice`, `speed`, `hint`
+      - `MODES[mode].ranked`가 `false`인 모드(연습) 버튼 아래에 "순위표에 기록되지 않음"
+      - `#mode-back-button`: [뒤로]
     - `#hint-button`
-  - `#start-mode-note` 규칙: 연습을 고르면 "순위표에 기록되지 않음"을 보여 주고, 다른 모드에서는 비워요.
+  - 동작
+    - [다음]: 고른 카테고리를 `app.category`에 두고 모드 선택 화면을 보여요.
+    - 모드 버튼: `startRound(mode, app.category)`로 바로 10문제를 시작해요.
+    - [뒤로]: 시작 화면으로 돌아가요. 고른 카테고리 라디오는 그대로예요.
 
-- [ ] **1단계: 모드 라디오와 힌트 버튼 추가**
+- [ ] **1단계: 모드 선택 화면과 힌트 버튼 추가**
 
 - `#hint-button`은 `MODES[mode].hint`일 때만 보여요.
 - 버튼은 `usedHint`이거나 `answered`이면 `disabled`예요.
@@ -516,8 +527,8 @@ selfTest("remainingSeconds: 15에서 0까지, 음수 없음", ({ assert }) => {
 
 - [ ] **3단계: 브라우저 확인**
 
-- 내장 브라우저에서 힌트 모드 한 판을 진행해요.
-- 단계 2 확인 항목 중 모드 선택, 힌트, 결과 소수 표시가 맞는지 봐요.
+- 내장 브라우저에서 카테고리 → [다음] → [힌트]로 힌트 모드 한 판을 진행해요.
+- 단계 2 확인 항목 중 모드 선택 화면, [뒤로], 힌트, 결과 소수 표시가 맞는지 봐요.
 
 ### 작업 7: 스피드 타이머
 
