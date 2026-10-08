@@ -15,7 +15,7 @@ const QUESTIONS = [
     id: "kh-02",
     category: "한국사",
     question: "918년 궁예를 몰아내고 고려를 세운 인물은?",
-    choices: ["견훤", "왕건", "궁예", "최영"],
+    choices: ["견훤", "왕건", "경순왕", "최영"],
     answer: 1,
     explanation: "왕건은 918년 6월 궁예를 내쫓고 새 왕조 고려의 태조가 되었어요.",
     source: "한국민족문화대백과사전 「태조(고려)」, https://encykorea.aks.ac.kr/Article/E0059032"
@@ -62,7 +62,7 @@ const QUESTIONS = [
     question: "고려 고종 때 새긴 팔만대장경(고려대장경판)이 현재 보관된 사찰은?",
     choices: ["불국사", "송광사", "해인사", "통도사"],
     answer: 2,
-    explanation: "1237~1248년에 새긴 고려대장경판은 현재 경남 합천의 해인사에 소장되어 있어요.",
+    explanation: "고려 고종 때 새긴 고려대장경판은 현재 경남 합천의 해인사에 소장되어 있어요.",
     source: "한국민족문화대백과사전 「합천 해인사 대장경판」, https://encykorea.aks.ac.kr/Article/E0062711"
   },
   {
@@ -134,7 +134,7 @@ const QUESTIONS = [
     id: "wg-05",
     category: "세계지리",
     question: "페루의 안데스에서 시작한 아마존강이 대서양으로 흘러드는 하구가 있는 나라는?",
-    choices: ["페루", "콜롬비아", "브라질", "베네수엘라"],
+    choices: ["아르헨티나", "콜롬비아", "브라질", "베네수엘라"],
     answer: 2,
     explanation: "아마존강은 페루 안데스에서 시작해 브라질을 가로질러 동쪽으로 흐른 뒤 대서양으로 흘러들어요.",
     source: "NASA Earth Observatory, Mouth of the Amazon, https://science.nasa.gov/earth/earth-observatory/mouth-of-the-amazon-1161/"
@@ -142,7 +142,7 @@ const QUESTIONS = [
   {
     id: "wg-06",
     category: "세계지리",
-    question: "1884년 국제 회의에서 본초 자오선(경도 0°)으로 정한 자오선이 지나는 영국의 천문대가 있는 곳은?",
+    question: "1884년 국제 자오선 회의에서 본초 자오선(경도 0°)의 기준으로 정한 영국 왕립 천문대가 있는 곳은?",
     choices: ["옥스퍼드", "케임브리지", "에든버러", "그리니치"],
     answer: 3,
     explanation: "1884년 워싱턴 국제 자오선 회의에서 그리니치 왕립 천문대를 지나는 자오선을 본초 자오선으로 정했어요.",
@@ -172,7 +172,7 @@ const QUESTIONS = [
     question: "아프리카 대륙 북부에 넓게 펼쳐진 사막은?",
     choices: ["고비사막", "아타카마사막", "사하라사막", "타클라마칸사막"],
     answer: 2,
-    explanation: "사하라사막은 약 850만 ㎢로 아프리카 북부의 넓은 지역을 차지해요.",
+    explanation: "사하라사막은 아프리카 북부에 있는, 세계에서 가장 큰 더운 사막이에요.",
     source: "National Geographic Education, Africa: Physical Geography, https://education.nationalgeographic.org/resource/africa-physical-geography/"
   },
   {
@@ -271,9 +271,9 @@ const QUESTIONS = [
     id: "sc-10",
     category: "과학",
     question: "혈당을 낮추는 호르몬인 인슐린을 만드는 기관은?",
-    choices: ["간", "이자(췌장)", "쓸개", "콩팥"],
+    choices: ["간", "췌장", "담낭", "신장"],
     answer: 1,
-    explanation: "인슐린은 이자(췌장)에서 만드는 호르몬이에요.",
+    explanation: "인슐린은 췌장(이자)에서 만드는 호르몬이에요.",
     source: "MedlinePlus (미국 국립의학도서관), Insulin in Blood, https://medlineplus.gov/lab-tests/insulin-in-blood-test/"
   },
 
@@ -282,9 +282,9 @@ const QUESTIONS = [
     id: "ac-01",
     category: "예술과 문화",
     question: "루브르 박물관에 있는 〈모나리자〉를 그린 화가는?",
-    choices: ["미켈란젤로", "라파엘로", "레오나르도 다빈치", "렘브란트"],
+    choices: ["미켈란젤로 부오나로티", "라파엘로 산치오", "레오나르도 다빈치", "렘브란트 판 레인"],
     answer: 2,
-    explanation: "〈모나리자〉(라 조콘드)는 레오나르도 다빈치가 1503~1519년에 그린 초상화예요.",
+    explanation: "〈모나리자〉(라 조콘드)는 레오나르도 다빈치가 피렌체 상인 프란체스코 델 조콘도의 아내 리자 게라르디니를 그린 초상화예요.",
     source: "루브르 박물관 소장품 정보, La Joconde, https://collections.louvre.fr/en/ark:/53355/cl010062370"
   },
   {
@@ -309,7 +309,7 @@ const QUESTIONS = [
     id: "ac-04",
     category: "예술과 문화",
     question: "몬터규가와 캐퓰릿가의 두 젊은이가 사랑에 빠지는 희곡 『로미오와 줄리엣』의 작가는?",
-    choices: ["괴테", "윌리엄 셰익스피어", "몰리에르", "세르반테스"],
+    choices: ["괴테", "셰익스피어", "몰리에르", "세르반테스"],
     answer: 1,
     explanation: "『로미오와 줄리엣』은 셰익스피어의 희곡으로, 원수 집안인 몬터규가와 캐퓰릿가의 두 젊은이가 사랑에 빠져요.",
     source: "폴저 셰익스피어 도서관, Romeo and Juliet, https://www.folger.edu/explore/shakespeares-works/romeo-and-juliet/"
@@ -317,10 +317,10 @@ const QUESTIONS = [
   {
     id: "ac-05",
     category: "예술과 문화",
-    question: "한 명의 창자가 고수의 북장단에 맞추어 소리와 아니리로 이야기를 엮고 발림을 곁들여 구연하는 전통 공연 예술은?",
+    question: "창자 한 명이 고수의 북장단에 맞춰 노래와 말(아니리)로 긴 이야기를 엮고 몸짓(발림)을 곁들이는 전통 공연 예술은?",
     choices: ["산조", "민요", "판소리", "가곡"],
     answer: 2,
-    explanation: "판소리는 창자 한 명이 고수의 북장단에 맞춰 소리와 아니리로 이야기를 엮고 발림을 곁들이는 공연 예술이에요.",
+    explanation: "판소리는 창자 한 명이 고수의 북장단에 맞춰 소리(노래)와 아니리(말)로 이야기를 엮고 발림(몸짓)을 곁들이는 공연 예술이에요.",
     source: "한국민족문화대백과사전 「판소리」, https://encykorea.aks.ac.kr/Article/E0059663"
   },
   {
