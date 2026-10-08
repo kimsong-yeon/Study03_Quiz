@@ -108,8 +108,30 @@ button.primary:disabled {
   cursor: pointer;
 }
 
+.student-info {
+  margin: 0 0 8px;
+  font-weight: 600;
+}
+
 .note {
   color: var(--muted);
+}
+
+.mode-options {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.mode-options button {
+  width: 100%;
+  font-weight: 600;
+}
+
+.mode-options .note {
+  margin: 4px 0 0;
+  font-size: 0.9rem;
 }
 
 .validation-errors {
@@ -155,6 +177,26 @@ button.primary:disabled {
   background: var(--wrong-bg);
   border-color: var(--wrong-border);
   border-width: 2px;
+}
+
+.choices button.removed {
+  opacity: 0.35;
+  text-decoration: line-through;
+}
+
+.hint-button {
+  margin-bottom: 16px;
+}
+
+.hint-button:disabled {
+  opacity: 0.5;
+}
+
+.timer {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0 0 8px;
+  font-variant-numeric: tabular-nums;
 }
 
 .feedback {
